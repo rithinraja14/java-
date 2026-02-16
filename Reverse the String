@@ -2,14 +2,19 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner s = new Scanner(System.in);
-       String t1=s.nextLine();
+        Scanner sc = new Scanner(System.in);
         
         
-      StringBuilder b=new StringBuilder(t1);
-        b.reverse();
-        System.out.println(b);
-
+        if (sc.hasNextLine()) {
+            String s = sc.nextLine();
+            
+            
+            String reversed = new StringBuilder(s).reverse().toString();
+            
+            
+            System.out.println(reversed);
+        }
+        
         
     }
 }

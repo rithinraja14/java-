@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+class Rectangle {
+    int length;
+    int breadth;
+
+
+    Rectangle(int length, int breadth) {
+        this.length = length;
+        this.breadth = breadth;
+    }
+
+    
+    void Area() {
+        
+        System.out.println("Area:" +( length * breadth));
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        
+        int length = sc.nextInt();
+        int breadth = sc.nextInt();
+
+        
+        Rectangle r = new Rectangle(length, breadth);
+
+        
+        r.Area();
+
+        
+    }
+}

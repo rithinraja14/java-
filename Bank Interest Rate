@@ -1,0 +1,52 @@
+import java.util.Scanner;
+
+class Bank  {
+    void rate() {
+        System.out.println("Animal makes a sound");
+    }
+}
+
+class SBI extends Bank {
+    void rate() {
+        System.out.println("6.5%");
+    }
+}
+
+class HDFC extends Bank  {
+    void rate() {
+        System.out.println("7.0%");
+    }
+}
+
+class ICICI extends Bank  {
+    void rate() {
+        System.out.println("6.8%");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+       
+        String type = sc.nextLine();
+
+         Bank a;   
+
+       
+        if (type.equals("SBI")) {
+            a = new SBI();
+        } else if (type.equals("HDFC")) {
+            a = new HDFC();
+        } else if (type.equals("ICICI")) {
+            a = new ICICI();
+        } else {
+            a = new Bank();
+        }
+
+        
+        a.rate();
+
+        
+    }
+}
